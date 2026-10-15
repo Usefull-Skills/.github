@@ -14,16 +14,16 @@ Remote Commander Browser is a distinct desktop browser project. It is **not** th
 
 ## Public first-party source repositories and organization forks
 
-The source repositories below remain the authoritative upstream locations for issues, official releases, and product-specific Project Brain/acceptance evidence. Organization Forks provide code history and a separate navigation location; they do not automatically replicate GitHub Issues, pull requests, release objects/assets, Wikis, package registries, or CI secrets.
+The source repositories below remain the original Git parents and current **official release locations**. However, **new development PRs and new issue reports** for **all six original-contributor forks in the table below** are now routed to their jointly administered organization repositories (see [Shared development home](COLLABORATION_HOME.md)). The legacy third-party fork chains remain under their upstream maintainer guidance. Forks do not automatically replicate existing Issues, PRs, release objects/assets, Wikis, package registries or CI secrets.
 
-| Domain / project | Organization fork | Authoritative source | Releases | Issues |
+| Domain / project | Organization repository | Original Git parent | Existing releases | New issue routing |
 | --- | --- | --- | --- | --- |
-| MCP automation — ChatGPT Remote Commander | [Fork](https://github.com/Usefull-Skills/ChatGPTRemoteCommander) | [Source](https://github.com/GOD13emad/ChatGPTRemoteCommander) | [Releases](https://github.com/GOD13emad/ChatGPTRemoteCommander/releases) | [Issues](https://github.com/GOD13emad/ChatGPTRemoteCommander/issues) |
-| Connectivity — FreeNetHub | [Fork](https://github.com/Usefull-Skills/FreeNetHub) | [Source](https://github.com/GOD13emad/FreeNetHub) | [Releases](https://github.com/GOD13emad/FreeNetHub/releases) | [Issues](https://github.com/GOD13emad/FreeNetHub/issues) |
-| Connectivity — OpenInternetGateway | [Fork](https://github.com/Usefull-Skills/OpenInternetGateway) | [Source](https://github.com/GOD13emad/OpenInternetGateway) | [Releases](https://github.com/GOD13emad/OpenInternetGateway/releases) | [Issues](https://github.com/GOD13emad/OpenInternetGateway/issues) |
-| Connectivity — DirectInternetMethod | [Fork](https://github.com/Usefull-Skills/DirectInternetMethod) | [Source](https://github.com/GOD13emad/DirectInternetMethod) | [Releases](https://github.com/GOD13emad/DirectInternetMethod/releases) | [Issues](https://github.com/GOD13emad/DirectInternetMethod/issues) |
-| Windows utility — TaskbarMonitorEnhanced | [Fork](https://github.com/Usefull-Skills/TaskbarMonitorEnhanced) | [Source](https://github.com/GOD13emad/TaskbarMonitorEnhanced) | [Releases](https://github.com/GOD13emad/TaskbarMonitorEnhanced/releases) | [Issues](https://github.com/GOD13emad/TaskbarMonitorEnhanced/issues) |
-| Persian document tools — PersianWordAgent | [Fork](https://github.com/Usefull-Skills/PersianWordAgent) | [Source](https://github.com/GOD13emad/PersianWordAgent) | [Releases](https://github.com/GOD13emad/PersianWordAgent/releases) | [Issues](https://github.com/GOD13emad/PersianWordAgent/issues) |
+| MCP automation — ChatGPT Remote Commander | [Shared development](https://github.com/Usefull-Skills/ChatGPTRemoteCommander) | [Source](https://github.com/GOD13emad/ChatGPTRemoteCommander) | [Releases](https://github.com/GOD13emad/ChatGPTRemoteCommander/releases) | [Organization Issues](https://github.com/Usefull-Skills/ChatGPTRemoteCommander/issues) |
+| Connectivity — FreeNetHub | [Shared development](https://github.com/Usefull-Skills/FreeNetHub) | [Source](https://github.com/GOD13emad/FreeNetHub) | [Releases](https://github.com/GOD13emad/FreeNetHub/releases) | [Organization Issues](https://github.com/Usefull-Skills/FreeNetHub/issues) |
+| Connectivity — OpenInternetGateway | [Shared development](https://github.com/Usefull-Skills/OpenInternetGateway) | [Source](https://github.com/GOD13emad/OpenInternetGateway) | [Releases](https://github.com/GOD13emad/OpenInternetGateway/releases) | [Organization Issues](https://github.com/Usefull-Skills/OpenInternetGateway/issues) |
+| Connectivity — DirectInternetMethod | [Shared development](https://github.com/Usefull-Skills/DirectInternetMethod) | [Source](https://github.com/GOD13emad/DirectInternetMethod) | [Releases](https://github.com/GOD13emad/DirectInternetMethod/releases) | [Organization Issues](https://github.com/Usefull-Skills/DirectInternetMethod/issues) |
+| Windows utility — TaskbarMonitorEnhanced | [Shared development](https://github.com/Usefull-Skills/TaskbarMonitorEnhanced) | [Source](https://github.com/GOD13emad/TaskbarMonitorEnhanced) | [Releases](https://github.com/GOD13emad/TaskbarMonitorEnhanced/releases) | [Organization Issues](https://github.com/Usefull-Skills/TaskbarMonitorEnhanced/issues) |
+| Persian document tools — PersianWordAgent | [Shared development](https://github.com/Usefull-Skills/PersianWordAgent) | [Source](https://github.com/GOD13emad/PersianWordAgent) | [Releases](https://github.com/GOD13emad/PersianWordAgent/releases) | [Organization Issues](https://github.com/Usefull-Skills/PersianWordAgent/issues) |
 
 The Fork branches/tags are **snapshots**, not continuously guaranteed mirrors. Fetch and compare exact Git refs before relying on them.
 
@@ -50,4 +50,4 @@ External licenses, usage conditions, credits and upstream security advisories go
 
 ## فارسی
 
-TandemVector Labs یک مجموعه فنی مشترک برای مهندسی، نرم‌افزار و پژوهش است. مخازن Fork سازمان به‌معنای انتقال مالکیت کامل پروژه، انتشار نسخه پایدار یا کپی تمام اطلاعات GitHub نیستند. برای دانلود نسخه‌ها و ثبت مشکلات، لینک مخزن اصلی هر پروژه را دنبال کنید. رعایت محرمانگی مخازن خصوصی و ذکر منبع پروژه‌های شخص ثالث الزامی است.
+TandemVector Labs یک مجموعه فنی مشترک برای مهندسی، نرم‌افزار و پژوهش است. مخازن Fork سازمان به‌معنای انتقال مالکیت کامل پروژه، انتشار نسخه پایدار یا کپی تمام اطلاعات GitHub نیستند. برای شش پروژهٔ اصلی، توسعه و ثبت مشکلات جدید در مخازن سازمانی انجام می‌شود، ولی انتشارهای موجود همچنان از مخازن شخصی اصلی دریافت می‌شوند. برای Forkهای شخص ثالث طبق راهنمای نگهدارنده اقدام کنید. رعایت محرمانگی مخازن خصوصی و ذکر منبع پروژه‌های شخص ثالث الزامی است.

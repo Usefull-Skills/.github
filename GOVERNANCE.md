@@ -10,7 +10,7 @@ Major decisions (organization handle, ownership, member permissions, private rep
 
 ## Source authority and release status
 
-Upstream personal repositories remain authoritative for projects represented here only by GitHub forks. A matching Git commit proves code parity at that commit; it does not prove parity of Issues, pull requests, Releases, Wiki, GitHub Actions, packages, secrets, branch policies or project acceptance.
+The six original-contributor organization forks listed in [Shared development home](COLLABORATION_HOME.md) are the designated **shared development, PR review and new issue intake locations** for both Owners, as described in [Shared GitHub development home](COLLABORATION_HOME.md). Their personal upstream GitHub repositories remain the Git source-lineage parents and the **existing publication/updater authority** until a separately reviewed release migration is accepted. Third-party fork chains retain their project-specific upstream routing and original authorship. A matching Git commit proves code parity at that commit; it does not prove parity of Issues, pull requests, Releases, Wiki, GitHub Actions, packages, secrets, branch policies or product acceptance.
 
 Never claim stable release status based solely on a successful build, GitHub workflow run or copied tag. Keep each project's raw test evidence, Project Brain, release notes, licenses and version history authoritative for that project.
 
@@ -20,7 +20,7 @@ Never claim stable release status based solely on a successful build, GitHub wor
 - Keep two-person owner recovery viable; require owners to enable 2FA before enforcing organization-wide 2FA, to prevent involuntary access lockout.
 - Prefer reviewable PRs, appropriately scoped permissions, verified status checks, secret scanning and documented rollback.
 - Never silently rewrite provenance, force-push, disable security controls or automatically promote candidate builds.
-- Refer issues to the active upstream when an organization repository is only a fork.
+- Route new issues for the six designated jointly developed first-party projects to their **organization** issue trackers. For all other forks follow project-specific active upstream guidance; do not assume GitHub fork ancestry determines the location of new team work.
 
 ## Changes and evidence
 
