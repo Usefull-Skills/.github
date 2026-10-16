@@ -1,4 +1,17 @@
-# TandemVector Labs
+<!-- Public TandemVector Labs profile; no private projects or unreleased artwork. -->
+<p align="center">
+  <img src="../brand/banner.svg" alt="TandemVector Labs — building reliable systems together" width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/Usefull-Skills/.github/blob/main/PROJECT_CATALOG.md"><strong>Project directory</strong></a> &nbsp;·&nbsp;
+  <a href="https://github.com/Usefull-Skills/.github/blob/main/CONTRIBUTING.md">Contribute</a> &nbsp;·&nbsp;
+  <a href="https://github.com/Usefull-Skills/.github/blob/main/GOVERNANCE.md">Governance</a> &nbsp;·&nbsp;
+  <a href="https://github.com/Usefull-Skills/.github/blob/main/SECURITY.md">Security</a> &nbsp;·&nbsp;
+  <a href="https://github.com/Usefull-Skills/.github/blob/main/SUPPORT.md">Support</a>
+</p>
+
+## About TandemVector Labs
 
 **A shared engineering and software R&D collective — building reliable systems together.**
 
@@ -6,16 +19,34 @@ TandemVector Labs is a **jointly operated technical collective**, not the person
 
 > **Brand:** TandemVector Labs · **Current GitHub namespace:** `Usefull-Skills`. A possible future handle change is not yet complete. This is a project and collaboration identity, **not a claim of registered company status or trademark clearance**. Each repository has its own licensing and release maturity.
 
+### Areas of work
+
+| Developer tooling | Desktop experiences | Connectivity and research |
+| :--- | :--- | :--- |
+| Automation workflows, reproducible utilities and engineering infrastructure | Accessible interfaces, desktop software and practical user-focused tools | Reliable networking, technical experimentation and applied R&amp;D |
+
+### Featured public projects
+
+| | |
+| :--- | :--- |
+| [![Remote Commander Browser — CEF desktop browser shell](../brand/social/remote-commander-browser.png)](https://github.com/Usefull-Skills/remote-commander-browser) | [![ChatGPT Remote Commander — permission-aware MCP tooling](../brand/social/ChatGPTRemoteCommander.png)](https://github.com/Usefull-Skills/ChatGPTRemoteCommander) |
+| **[Remote Commander Browser](https://github.com/Usefull-Skills/remote-commander-browser)** — organization-origin project; candidate-stage software | **[ChatGPT Remote Commander](https://github.com/Usefull-Skills/ChatGPTRemoteCommander)** — organization fork; [personal upstream and releases](https://github.com/GOD13emad/ChatGPTRemoteCommander) |
+| [![Open Internet Gateway — cross-platform connectivity](../brand/social/OpenInternetGateway.png)](https://github.com/Usefull-Skills/OpenInternetGateway) | [![FreeNet Hub — connectivity desktop tools](../brand/social/FreeNetHub.png)](https://github.com/Usefull-Skills/FreeNetHub) |
+| **[Open Internet Gateway](https://github.com/Usefull-Skills/OpenInternetGateway)** — organization fork; [personal upstream and releases](https://github.com/GOD13emad/OpenInternetGateway) | **[FreeNet Hub](https://github.com/Usefull-Skills/FreeNetHub)** — organization fork; [personal upstream and releases](https://github.com/GOD13emad/FreeNetHub) |
+
+*These visual cards are a navigation aid, not GitHub pinned-repository settings or an indication of release acceptance. See each project's README and the directory below for current status and attribution.*
+
 ## Explore the work
 
 Browse the [complete public project directory](https://github.com/Usefull-Skills/.github/blob/main/PROJECT_CATALOG.md) for verified upstream links, release locations, issue reporting and status boundaries.
 
 
-### Original project in this organization
+### Original projects hosted in this organization
 
 | Project | Focus | Status |
 | --- | --- | --- |
 | **[Remote Commander Browser](https://github.com/Usefull-Skills/remote-commander-browser)** | Unofficial Chromium Embedded Framework (CEF) desktop browser shell, with native tabs, Persian/Arabic RTL support, and narrowly scoped permissions | **Candidate-stage**; refer to its own README and releases for verified details |
+| **[Appearance Studio Core](https://github.com/Usefull-Skills/AppearanceStudio-Core)** | Linux/GNOME appearance tooling, Theme Packs and transactional rollback; written by Dr. Emadoddin under the distinct **Arclenor Technologies** product identity | **v0.9.0 release candidate**, GNOME 50 live acceptance still pending; no shipped Windows version claimed |
 
 Remote Commander Browser is a **separate project** from the Remote Commander MCP server. It is not an official OpenAI or ChatGPT desktop application.
 

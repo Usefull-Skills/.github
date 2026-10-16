@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" role="img" aria-label="TandemVector Labs, building reliable systems together"><title>TandemVector Labs</title><defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050f23"/><stop offset=".55" stop-color="#101b39"/><stop offset="1" stop-color="#071630"/></linearGradient>
+<radialGradient id="aura"><stop stop-color="#336bff" stop-opacity=".28"/><stop offset="1" stop-color="#296dff" stop-opacity="0"/></radialGradient>
+<radialGradient id="aqua"><stop stop-color="#09dddf" stop-opacity=".16"/><stop offset="1" stop-color="#00dcdb" stop-opacity="0"/></radialGradient>
+<linearGradient id="accent"><stop stop-color="#5ef5e8"/><stop offset=".52" stop-color="#45aaff"/><stop offset="1" stop-color="#aa75fb"/></linearGradient>
+<linearGradient id="t" gradientUnits="userSpaceOnUse" x1="110" y1="110" x2="360" y2="292"><stop stop-color="#5cf8eb"/><stop offset=".4" stop-color="#27a1fb"/><stop offset="1" stop-color="#5b6af7"/></linearGradient>
+<linearGradient id="v" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2ce6e3"/><stop offset=".5" stop-color="#3978ef"/><stop offset="1" stop-color="#a066f6"/></linearGradient>
+<pattern id="mesh" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M38 0H0V38" fill="none" stroke="#5aabe9" stroke-width=".7" opacity=".15"/></pattern>
+<clipPath id="inside"><rect width="1600" height="520" rx="25"/></clipPath></defs>
+<g clip-path="url(#inside)">
+<rect width="1600" height="520" fill="url(#bg)"/>
+<ellipse cx="1420" cy="210" rx="530" ry="410" fill="url(#aura)"/><ellipse cx="180" cy="340" rx="510" ry="430" fill="url(#aqua)"/>
+<path d="M890 0H1600V520H890Z" fill="url(#mesh)"/>
+<g stroke="url(#accent)" stroke-width="2" opacity=".36" fill="none">
+<path d="M1030 -15C1120 125 1410 66 1650 275"/>
+<path d="M940 55C1150 228 1380 90 1660 405"/>
+<path d="M1000 530C1180 288 1370 406 1660 65"/>
+<ellipse cx="1374" cy="258" rx="330" ry="195" transform="rotate(-17 1374 258)"/>
+<ellipse cx="1384" cy="242" rx="241" ry="141" transform="rotate(-17 1384 242)"/></g>
+<g fill="#63d9fa" opacity=".5"><circle cx="1165" cy="142" r="3"/><circle cx="1457" cy="100" r="4"/><circle cx="1280" cy="421" r="3"/></g>
+<rect x="60" y="125" width="270" height="270" rx="62" fill="#112342" opacity=".85" stroke="#578ff0" stroke-opacity=".4" stroke-width="3"/>
+<g transform="translate(78 145) scale(.49)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M122 137H358" stroke="url(#t)" stroke-width="55"/>
+<path d="M240 137V292" stroke="url(#t)" stroke-width="54"/>
+<path d="M113 219L237 371L365 218" stroke="url(#v)" stroke-width="55"/>
+<path d="M100 328C156 398 295 407 391 285" stroke="url(#accent)" stroke-width="17"/></g>
+<g font-family="Inter,Segoe UI,Arial,sans-serif">
+<text x="375" y="134" font-size="17" letter-spacing="5" font-weight="700" fill="#6ae4e4">INDEPENDENT ENGINEERING COLLECTIVE</text>
+<text x="372" y="225" font-size="66" font-weight="800" fill="#f2f6ff" letter-spacing="-2">TandemVector</text>
+<text x="375" y="303" font-size="72" font-weight="800" fill="url(#accent)">Labs</text>
+<text x="377" y="363" font-size="26" font-weight="500" fill="#bacbe7">Building reliable systems together.</text>
+<text x="377" y="421" font-size="18" fill="#aabfdf">Developer tools  /  Desktop software  /  Applied research</text>
+</g><path d="M376 447H880" stroke="url(#accent)" stroke-width="3" opacity=".82"/>
+<rect x="26" y="26" width="1548" height="468" rx="20" fill="none" stroke="#739de2" stroke-opacity=".27" stroke-width="2"/>
+</g></svg>

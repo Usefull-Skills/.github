@@ -20,3 +20,32 @@ GitHub inherits supported default community files from this public `.github` rep
 
 **Current URL:** https://github.com/Usefull-Skills
 **Potential future handle:** `TandemVector-Labs` — not yet executed; verify links and external dependencies before changing the namespace.
+
+## Visual identity
+
+The public organization profile uses a single **TandemVector Labs** visual identity. Source artwork is maintained here, separately from project-specific screenshots or third-party media:
+
+- [Scalable brand mark](brand/monogram.svg) (SVG)
+- [Organization profile banner](brand/banner.svg) (SVG, 1600 × 520)
+- [Ready-to-upload organization avatar](brand/avatar.png) (PNG, 384 × 384)
+
+![TandemVector Labs avatar](brand/avatar.png)
+
+**Usage boundaries:** This original artwork represents a shared project and collaboration identity—not a registered company, cleared trademark, verified domain, completed product release, or third-party endorsement. The current namespace remains `Usefull-Skills`; these assets do not rename the organization. Setting the account avatar requires an organization owner to upload the PNG in organization profile settings. Keep private repositories, secrets and unlicensed content out of the public profile.
+
+## Repository social preview artwork
+
+Eight optional, original **1280 × 640 PNG** designs (each **under 1 MB**) coordinate with the organization banner. They are stored as reusable artwork, **not automatically applied as repository Social previews**. A repository administrator must select the appropriate PNG under the relevant repository's **Settings → Social preview → Edit → Upload an image** after this PR is approved. Check the public link card afterward.
+
+| Project | Preview | Intended destinations |
+| --- | --- | --- |
+| Remote Commander Browser | [PNG](brand/social/remote-commander-browser.png) | Organization original |
+| ChatGPT Remote Commander | [PNG](brand/social/ChatGPTRemoteCommander.png) | Personal authoritative source and organization fork |
+| Open Internet Gateway | [PNG](brand/social/OpenInternetGateway.png) | Personal authoritative source and organization fork |
+| FreeNet Hub | [PNG](brand/social/FreeNetHub.png) | Personal authoritative source and organization fork |
+| Direct Internet Method | [PNG](brand/social/DirectInternetMethod.png) | Personal authoritative source and organization fork |
+| Taskbar Monitor Enhanced | [PNG](brand/social/TaskbarMonitorEnhanced.png) | Personal authoritative source and organization fork |
+| Persian Word Agent | [PNG](brand/social/PersianWordAgent.png) | Personal authoritative source and organization fork |
+| Appearance Studio Core | [PNG](brand/social/AppearanceStudio-Core.png) | Organization original |
+
+**Boundaries:** These previews do not imply official affiliation, stable release status, ownership transfer, author approval, license changes or active maintenance. Legacy third-party forks, transfer staging and private repositories have no branded social preview in this pack. Preserve existing repo-specific imagery when it better represents the project and its upstream authorship.
