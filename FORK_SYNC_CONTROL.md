@@ -1,3 +1,74 @@
+# R039 — Current two-direction fork promotion (2026-10-15)
+
+**Proposed / REVIEW REQUIRED — not effective until merged by authorized human Owners.** This section closes the missing *joint-organization development → original personal release repository* direction. All historical R006 snapshots below remain evidence, not perpetual SHA or product acceptance. No live repository, release, tag, CI secret, or private data was changed by this proposal.
+
+## Scope and invariants
+
+- Applies only to six first-party public GitHub fork pairs: `OpenInternetGateway`, `ChatGPTRemoteCommander`, `DirectInternetMethod`, `FreeNetHub`, `TaskbarMonitorEnhanced` and `PersianWordAgent`; organization owner `Usefull-Skills`, personal parent `GOD13emad`. The two legacy third-party fork chains and personal private repositories are **excluded**. Check exact `fork=true`, `parent.full_name`, numeric repository IDs and visibility before every transfer.
+- Organization forks are the **proposed** joint PR/new issue home in [governance PR #3](https://github.com/Usefull-Skills/.github/pull/3); personal parents remain existing published-release/updater authorities. Treat those as different roles until a separately reviewed migration occurs.
+- Keep both active Owners' administration, protections, original branches/commits, private visibility, signatures and review rights. No force push, reset, squash/cherry-pick into a source whose ancestry must remain reconcilable, auto-release, or substitution of automated technical review for a genuine independent Owner approval.
+
+## A. Organization-developed code promoted to the personal release source
+
+1. **Snapshot live refs:** independently fetch personal `main` SHA `S0`, organization `main` SHA `O0`, merge-base/ancestry, open PRs and checks. Verify this is the intended fork network and no unreviewed divergence already exists. Do not use historic snapshots as a write lease.
+2. **Approve organization development first:** land changes by reviewable PR into organization `main` only after exact-head CI/CodeQL/appropriate regression and a separate, eligible *human* Owner review. Let the resulting accepted organization head be `O1`. `O1` is source-code acceptance, **not** personal stable release acceptance.
+3. **Promote via a cross-fork upstream PR:** base `GOD13emad/<repo>:main`, head the accepted `Usefull-Skills/<repo>:main` at `O1` (or a pinned source-equivalent immutable branch). Re-read personal head `S1`, perform source-specific tests, integration checks, and independent review. A normal **merge commit** in the personal parent preserves the exact `O1` ancestor while accepting any concurrent parent-only commits. A true fast-forward may also preserve ancestry where allowed. If source policy enforces linear history, **STOP** for a separately approved reconciliation plan; never assume a squash/rebase can preserve the original `O1` commit identity.
+4. **Enforce the ancestry gate before returning to the organization:** after upstream acceptance, let personal protected `main` be `S2`. Verify `O1` is still the organization branch head, `O1` is an ancestor of `S2` (`git merge-base --is-ancestor O1 S2`), and exact-source-HEAD checks passed. If any condition fails, leave refs untouched and reconcile another reviewed PR. Equivalent file content without this ancestry condition does **not** justify blind fast-forward.
+5. **Safely reconcile, but only through permitted branch controls:** after all A.4 invariants, attempt the **single-ref GraphQL `updateRefs` with `beforeOid=O1`** as described in the *Verified expected-old ref protocol* below **only if repository rules authorize that exact write to protected `main`**. Use `afterOid=S2` and `force=false`. GitHub REST's `PATCH git/refs` with `force=false` is **not** an exact-old-SHA compare-and-swap; never use GET + PATCH to pretend it is. Any branch protection denial or ref drift is a hard STOP. If direct update is prohibited, use the organization's independently approved PR/merge-queue flow; do not assert resulting main's SHA equals `S2` unless it actually does (merge commits may produce another SHA). Independently re-read original and target refs, branch protections and exact-HEAD checks; preserve other branches/service data and never publish an asset or tag from source-code reconciliation alone.
+6. **Release independently:** only the personal-parent publishing/updater process can release until release URLs and product-specific acceptance have separately passed both-Owner review. Validate installer provenance, signed assets if required, real deployment/rollback, security findings and immutable version identity as applicable.
+
+## B. Personal-source changes with no unpromoted organization changes
+
+- Verify current parent/fork refs are the correct intended pair. If org head is an ancestor of parent head, parent advanced cleanly and the fork has no new unreviewed commits, apply only the **approved single-ref `updateRefs` expected-old-`beforeOid` operation** described below (`force=false`), and only if organization branch protections permit it; otherwise take the genuinely reviewed organization PR/merge-queue path. Re-check source/target SHAs and exact-head CI; a merge commit may establish ancestry/content acceptance without establishing **exact-tip SHA parity**.
+- If org is ahead, both branches advanced, protection changed, the source PR is not approved, or ancestry is ambiguous, **do not synchronize or reset**. Instead resolve the org changes with path A and a human-reviewed Git merge/PR. Never use `gh repo sync --force` to make the numbers match.
+
+## Verified expected-old ref protocol — GitHub GraphQL, not REST PATCH
+
+**Preflight is mandatory on every run.** Confirm the correct GitHub organization repository's immutable `node_id`, fork parent and numeric repository IDs, visibility, live protected branch rules, actual Owner/reviewer authorization and the accepted source and organization SHA chain. Confirm old organization head is exactly `O1`, new source head is exactly `S2`, and `git merge-base --is-ancestor O1 S2` succeeds with fresh refs. Never use an old checkpoint as authorization to write.
+
+GitHub GraphQL `updateRefs` accepts `UpdateRefsInput(repositoryId, refUpdates)`. The `RefUpdate` input has `name`, `afterOid`, **`beforeOid`**, and `force`. The schema describes `beforeOid` as **“The value this ref needs to point to before the update.”** For **one specific ref**, the intended conditional mutation is:
+
+```graphql
+mutation GuardedOrgRefUpdate($input: UpdateRefsInput!) {
+  updateRefs(input: $input) {
+    clientMutationId
+  }
+}
+```
+
+The example variables below use symbolic placeholders, **not real reusable permission or merge tokens**:
+
+```json
+{
+  "input": {
+    "repositoryId": "<freshly verified organization node_id>",
+    "refUpdates": [
+      {
+        "name": "refs/heads/main",
+        "beforeOid": "<current, independently re-read O1 SHA>",
+        "afterOid": "<accepted S2 SHA>",
+        "force": false
+      }
+    ]
+  }
+}
+```
+
+Never omit `beforeOid`, never set `force=true`, and do not attempt this direct mutation if branch rules require a reviewed PR or otherwise prohibit the ref update. A request with an expected old SHA is **not a branch-protection bypass**. If rejected for mismatch, permission, required checks, or rulesets, stop and record the exact failure. Re-run ancestry/CI/independent-review preflight before a *separately authorized* retry; do not auto-retry with the freshly fetched head.
+
+**Live behavior verified 2026-10-15:** on a freshly created, **unprotected temporary** branch of `Usefull-Skills/.github`, a GraphQL `updateRefs` request with deliberately incorrect `beforeOid` was rejected and left the ref unchanged; a request with the correct `beforeOid` and `force=false` succeeded and exact SHA readback matched. The temporary branch was deleted and checked absent; protected `main` was checked unchanged. **No direct protected-main write was tested or authorized by this fixture.**
+
+**Protected-main fallback:** open an ordinary cross-fork/organization integration PR with appropriately verified source commits, exact-HEAD checks and actual independent human Owner approval, then use only GitHub's policy-compliant merge/merge-queue flow. After merge, record the **observed** organization tip `O2`. When `O2 != S2` (e.g. a merge commit), classify **EXACT-TIP-PARITY=OPEN** even if `S2` is an ancestor of `O2`; do not claim a clean fast-forward back to the personal source. Assess any new organization commits/differences in a separately reviewed reconciliation before the next synchronization. If neither a permitted conditional ref update nor a genuinely approved PR merge can preserve required provenance, leave branches unchanged and declare the synchronization gate **BLOCKED**, not PASS.
+
+## Reproducible algorithm evidence and limitations
+
+- A separate throwaway local Git fixture (2026-10-15) simulated `O1` (organization work), concurrent `S1` (personal work), an ancestry-preserving merge to `S2` and a clean org `--ff-only` update to the same `S2` SHA: **PASS**. A copy-equivalent personal squash branch deliberately failed `merge-base --is-ancestor O1` as expected. No user source repository was modified by that fixture.
+- On 2026-10-15 the six paired org forks had `has_issues=true`, verified parents and matching protected default-head SHAs at the cited checkpoint. Parity is a snapshot, not continuous background mirroring. Human reviews, source release gates and current poststate remain OPEN unless independently evidenced.
+- Primary docs: [fork-origin PR](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request-from-a-fork); [merge commit vs squash/rebase](https://docs.github.com/en/pull-requests/reference/pull-request-merges); [sync a fork](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/syncing-a-fork).
+
+---
+
+## Historical source-to-organization snapshots (R006 and earlier; not current release approval)
 # R006.2 — Terminal exact-head verification (2026-10-14)
 
 **Current accepted public-fork Git/CI milestone: PASS.** All **eight** publicly forked repository default branch SHA values match personal upstream (direct GitHub ref readback at this snapshot), and all existing Git Tag name/target SHA entries match in paginated checks; intentional historical fork-only branches are **preserved**, not deleted.
